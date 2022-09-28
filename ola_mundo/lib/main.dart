@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
   Column(
-    children: const <Widget>[
-      Text('Texto 01', textDirection: TextDirection.ltr),
-      Text('Texto 02', textDirection: TextDirection.ltr),
-      Expanded(
+    children:  <Widget>[
+      const Text('Ronald Santos', textDirection: TextDirection.ltr),
+      const Text('Curso de Flutter', textDirection: TextDirection.ltr),
+      const Text('Ifal', textDirection: TextDirection.ltr),
+      /*Expanded(
         child: FittedBox(
           fit: BoxFit.contain,
           child: FlutterLogo(),
           ),
-        ),
-    ],
+        ),*/
+        Column(
+          children: const<Widget>[
+            Text('Outro texto', textDirection: TextDirection.ltr),
+          ],
+        )
+    ],  
   ),
 );
 
