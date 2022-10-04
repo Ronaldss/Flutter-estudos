@@ -23,6 +23,7 @@ void main() => runApp(
       ), 
       appBar: AppBar(
         title: Text('Transferências'),
+        backgroundColor: Colors.deepOrange [200],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
