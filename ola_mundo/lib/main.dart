@@ -4,13 +4,8 @@ void main() => runApp(
   MaterialApp(
     home: Scaffold(
       body: Card(
-        child: Column(
-          children: <Widget>[
-            Text('Ronald Santos 1'),
-            Text('Ronald Santos 2'),
-            Text('Ronald Santos 3'),
-            Text('Ronald Santos 4'),
-          ],
+        child: ListTile(
+          leading: Icon(Icons.monetization_on),
         ),
       ),
       appBar: AppBar(
