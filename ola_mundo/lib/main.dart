@@ -8,7 +8,7 @@ void main() => runApp(
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
-        child: Icon(Icons.add),
+        child: Icon(Icons.camera_alt),
         ),
     )
   ),
