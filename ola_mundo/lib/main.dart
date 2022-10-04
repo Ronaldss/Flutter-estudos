@@ -11,7 +11,7 @@ void main() => runApp(
           fit: BoxFit.contain,
           child: FlutterLogo(),
           ),
-        ),*/
+        ),teste*/
         Column(
           children: const<Widget>[
             Text('Outro texto', textDirection: TextDirection.ltr),
