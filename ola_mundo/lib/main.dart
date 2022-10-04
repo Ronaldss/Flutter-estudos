@@ -6,6 +6,10 @@ void main() => runApp(
       appBar: AppBar(
         title: Text('Transferências'),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Icon(Icons.add),
+        ),
     )
   ),
 );
