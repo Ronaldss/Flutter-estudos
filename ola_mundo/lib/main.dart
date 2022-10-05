@@ -34,7 +34,10 @@ void main() => runApp(
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
-        child: Icon(Icons.camera_alt),
+
+        //Alterando o formato do button
+        child: Icon(Icons.access_alarms_sharp),
+        
         ),
     )
   ),
