@@ -22,6 +22,13 @@ void main() => runApp(
         ]
       ), 
       appBar: AppBar(
+        // Alterando a cor do Título
+        titleTextStyle: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Color.fromARGB(255, 193, 4, 20),
+        ),
+
         title: Text('Transferências'),
         backgroundColor: Colors.deepOrange [200],
       ),
