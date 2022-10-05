@@ -32,16 +32,33 @@ void main() => runApp(
         title: Text('Transferências'),
         backgroundColor: Colors.deepOrange [200],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
 
-        //Alterando o formato do button
-        child: Icon(Icons.access_alarms_sharp),
-        
+      floatingActionButtonLocation: 
+        FloatingActionButtonLocation.centerDocked,
+
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+        child: Row(
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.red,
+
+              child: Icon(Icons.remove),
+              ),
+              const Spacer(),
+              FloatingActionButton(
+                onPressed: () {},
+                child: const Icon(Icons.add),
+                ),
+        ],
+        ),
         ),
     )
   ),
 );
+
+
 
 
 // 
