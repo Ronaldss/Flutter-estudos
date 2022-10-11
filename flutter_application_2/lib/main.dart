@@ -14,34 +14,46 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Column(  // Para colocar os Contaners uns em cima do outro, usando um conceito cartesiano.
-        
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+
         children: [
-          Container(
-            color: Colors.red,
-            width: 300,
-            height: 300,
-          ),
+
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 100,
+                height: 100,
+              ),
 
         
-        Container(
-          color: Colors.purple,
-          width: 150,
-          height: 150,
+              Container(
+                color: Colors.blue,
+                width: 50,
+                height: 50,
+              ),
+            ],
           ),
+          
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.blue,
+                width: 100,
+                height: 100,
+              ),
 
-        Container(
-          color: Colors.blueAccent,
-          width: 75,
-          height: 75,
+        
+              Container(
+                color: Colors.red,
+                width: 50,
+                height: 50,
+              ),
+            ],
           ),
-
-        Container(
-          color: Colors.green,
-          width: 400,
-          height: 20,
-          ),  
-
-
         ],
       ),
     );
