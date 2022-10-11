@@ -13,32 +13,32 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Stack(
-        alignment: AlignmentDirectional.center,
+      home: Column(  // Para colocar os Contaners uns em cima do outro, usando um conceito cartesiano.
+        
         children: [
           Container(
             color: Colors.red,
-            width: 150,
-            height: 150,
+            width: 300,
+            height: 300,
           ),
 
         
         Container(
-          color: Colors.blue,
-          width: 100,
-          height: 100,
+          color: Colors.purple,
+          width: 150,
+          height: 150,
+          ),
+
+        Container(
+          color: Colors.blueAccent,
+          width: 75,
+          height: 75,
           ),
 
         Container(
           color: Colors.green,
-          width: 1000,
-          height: 10,
-          ),
-
-        Container(
-          color: Colors.green,
-          width: 10,
-          height: 1000,
+          width: 400,
+          height: 20,
           ),  
 
 
