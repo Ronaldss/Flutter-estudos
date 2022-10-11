@@ -13,11 +13,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Container(
-        color: Colors.pink,
-        child: Container(
-          color: Colors.amber,
-        ),
+      home: Stack(
+        children: [
+          Container(
+            color: Colors.red,
+          ),
+
+        
+        Container(
+          color: Colors.blue,
+          width: 100,
+          height: 100,
+          ),
+        ],
       ),
     );
   }
