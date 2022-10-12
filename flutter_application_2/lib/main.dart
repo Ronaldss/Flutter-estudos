@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Column(  // Para colocar os Contaners uns em cima do outro, usando um conceito cartesiano.
+      home: Container(  // Para colocar os Contaners uns em cima do outro, usando um conceito cartesiano.
+        color: Colors.white,
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
 
@@ -35,8 +37,7 @@ class MyApp extends StatelessWidget {
                 height: 50,
               ),
             ],
-          ),
-          
+          ),         
           Stack(
             alignment: AlignmentDirectional.center,
             children: [
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-        Row(
+          Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -91,6 +92,7 @@ class MyApp extends StatelessWidget {
 
         ],
       ),
+      )
     );
   }
 }
