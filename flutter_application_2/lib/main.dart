@@ -73,7 +73,21 @@ class MyApp extends StatelessWidget {
               height: 50,
               width: 50,
             ),
-        ],)
+        ],),
+
+        Container(
+          color: Colors.lightGreen,
+          height: 30,
+          width: 300,
+          child: Text(
+            'Instituto Federal',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        )
 
         ],
       ),
