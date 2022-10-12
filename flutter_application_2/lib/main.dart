@@ -55,6 +55,8 @@ class MyApp extends StatelessWidget {
             ],
           ),
         Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               color: Colors.pink,
