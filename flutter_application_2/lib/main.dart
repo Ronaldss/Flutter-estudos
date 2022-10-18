@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.pink,  
         ),
+        floatingActionButton: FloatingActionButton(onPressed: () {}),
       ), // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
     );
   }
