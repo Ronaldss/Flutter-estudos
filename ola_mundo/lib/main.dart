@@ -28,8 +28,8 @@ void main() => runApp(
           fontWeight: FontWeight.bold,
           color: Color.fromARGB(255, 193, 4, 20),
         ),
-
-        title: Text('Transferências'),
+        
+        title: Text('Transferências.'),
         backgroundColor: Colors.deepOrange [200],
       ),
 
