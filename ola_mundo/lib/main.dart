@@ -1,64 +1,98 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-  MaterialApp(
-    home: Scaffold(
-      body: Column(
-        children: <Widget>[
-        Card(
-        child: ListTile(
-          leading: Icon(Icons.monetization_on),
-          title: Text('100.0'),
-          subtitle: Text('1000'),
-        ),
-      ),
-      Card(
-        child: ListTile(
-          leading: Icon(Icons.monetization_on),
-          title: Text('200.0'),
-          subtitle: Text('1000'),
-        ),
-      ),
-        ]
-      ), 
-      appBar: AppBar(
-        // Alterando a cor do Título
-        titleTextStyle: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: Color.fromARGB(255, 193, 4, 20),
-        ),
-        
-        title: Text('Transferências.'),
-        backgroundColor: Colors.deepOrange [200],
-      ),
+void main() {
+  runApp(const MyApp());
+}
 
-      floatingActionButtonLocation: 
-        FloatingActionButtonLocation.centerDocked,
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Container(  // Para colocar os Contaners uns em cima do outro, usando um conceito cartesiano.
+        color: Colors.white,
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
 
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
-        child: Row(
-          children: [
-            FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: Colors.red,
+        children: [
 
-              child: Icon(Icons.remove),
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 100,
+                height: 100,
               ),
-              const Spacer(),
-              FloatingActionButton(
-                onPressed: () {},
-                child: const Icon(Icons.add),
-                ),
+
+        
+              Container(
+                color: Colors.blue,
+                width: 50,
+                height: 50,
+              ),
+            ],
+          ),         
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.blue,
+                width: 100,
+                height: 100,
+              ),
+
+        
+              Container(
+                color: Colors.purple,
+                width: 50,
+                height: 50,
+              ),
+            ],
+          ),
+          Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              color: Colors.pink,
+              height: 50,
+              width: 50,
+            ),
+            Container(
+              color: Colors.yellow,
+              height: 50,
+              width: 50,
+            ),
+            Container(
+              color: Colors.blue,
+              height: 50,
+              width: 50,
+            ),
+        ],),
+
+        Container(
+          color: Colors.lightGreen,
+          height: 30,
+          width: 300,
+          child: Text(
+            'Instituto Federal',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        )
+
         ],
-        ),
-        ),
-    )
-  ),
-);
-
-
-
-
-// 
+      ),
+      )
+    );
+  }
+}
