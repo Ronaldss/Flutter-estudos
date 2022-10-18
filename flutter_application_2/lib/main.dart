@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter: Curso de Flutter'),
         ),
-      ) // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
+        body: Container(
+          color: Colors.pink,  
+        ),
+      ), // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
     );
   }
 }
