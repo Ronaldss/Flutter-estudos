@@ -19,7 +19,18 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter: Curso de Flutter'),
         ),
         body: Container(
-          color: Colors.pink,  
+          child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
+            children: [
+              Container(
+                color: Colors.blue,
+                height: 140,
+              ),
+              Container(
+                color: Colors.white,
+                height: 100,
+              )
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
       ), // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
