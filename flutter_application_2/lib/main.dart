@@ -18,7 +18,29 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter: Curso de Flutter'),
         ),
-        body: Container(
+        body: Column(
+         children: [
+          Task(),
+          Task(),
+          Task(),
+         ],
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: () {}),
+      ), // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
+    );
+  }
+}
+
+
+//Classe que usaremos para ficar repetindo a estrutua das linhas que foi criada no inicio.
+class Task extends StatelessWidget {
+  const Task({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+      
           child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
             children: [
               Container(
@@ -45,20 +67,8 @@ class MyApp extends StatelessWidget {
               )
             ],
           ),
-        ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}),
-      ), // Scaffold - Estrutura onde conseguimos ter uma divisão com começo, meio e fim. Um Containner não permite ter essa estrutura de começo, meio e fim.
+        
+
     );
-  }
-}
-
-
-//Classe que usaremos para ficar repetindo a estrutua das linhas que foi criada no inicio.
-class Task extends StatelessWidget {
-  const Task({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
