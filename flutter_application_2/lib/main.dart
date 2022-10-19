@@ -51,3 +51,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+//Classe que usaremos para ficar repetindo a estrutua das linhas que foi criada no inicio.
+class Task extends StatelessWidget {
+  const Task({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
