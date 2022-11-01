@@ -56,38 +56,42 @@ class Task extends StatelessWidget {
   const Task(this.frase,{super.key});
 
   @override
+  // Adicionando espaço entre os containes.
   Widget build(BuildContext context) {
-    return Container(
-      
-      
-          child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
-            children: [
-              Container(
-                color: Colors.blue,
-                height: 140,
-              ),
-              Container(
-                color: Colors.white,
-                height: 100,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      color: Colors.black26,
-                      width: 72,
-                      height: 100,
-                    ),
-                    Text('Conhecendo Flutter'),
-                    ElevatedButton(
-                      onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
-                    
-                  ],
-                ),
-              )
-            ],
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
         
+        
+            child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
+              children: [
+                Container(
+                  color: Colors.blue,
+                  height: 140,
+                ),
+                Container(
+                  color: Colors.white,
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        color: Colors.black26,
+                        width: 72,
+                        height: 100,
+                      ),
+                      Text('Conhecendo Flutter'),
+                      ElevatedButton(
+                        onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
+                      
+                    ],
+                  ),
+                )
+              ],
+            ),
+          
 
+      ),
     );
   }
 }
