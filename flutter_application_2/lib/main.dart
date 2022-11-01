@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter: Curso de Flutter'),
         ),
         body: Column(
-         children: [
-          Task(),
-          Task(),
-          Task(),
+         children:[
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
          ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
 
 //Classe que usaremos para ficar repetindo a estrutua das linhas que foi criada no inicio.
 class Task extends StatelessWidget {
-  const Task({super.key});
+  final String frase; // criando um parêmetro final do tipo String, o que pode ser alterado é a "frase"
+  const Task(this.frase,{super.key});
 
   @override
   Widget build(BuildContext context) {
