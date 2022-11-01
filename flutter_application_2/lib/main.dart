@@ -87,10 +87,9 @@ class Task extends StatelessWidget {
                         child: Text(
                           frase,
                           style: TextStyle(
-                            fontSize: 24, overflow: TextOverflow.ellipsis)
+                            fontSize: 24, overflow: TextOverflow.ellipsis),
                           ),
                         ),
-                      )
                       //Text('Conhecendo Flutter'),
                       ElevatedButton(
                         onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
