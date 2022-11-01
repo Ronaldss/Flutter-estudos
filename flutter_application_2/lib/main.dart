@@ -51,10 +51,15 @@ class MyApp extends StatelessWidget {
 
 
 //Classe que usaremos para ficar repetindo a estrutua das linhas que foi criada no inicio.
-class Task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String frase; // criando um parêmetro final do tipo String, o que pode ser alterado é a "frase"
   const Task(this.frase,{super.key});
 
+  @override
+  State<Task> createState() => _TaskState();
+}
+
+class _TaskState extends State<Task> {
   @override
   // Adicionando espaço entre os containes.
   Widget build(BuildContext context) {
@@ -88,7 +93,7 @@ class Task extends StatelessWidget {
                       Container(
                         width: 200,
                         child: Text(
-                          frase,
+                          widget.frase,
                           style: TextStyle(
                             fontSize: 24, overflow: TextOverflow.ellipsis),
                           ),
