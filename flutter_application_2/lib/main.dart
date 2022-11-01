@@ -95,7 +95,11 @@ class Task extends StatelessWidget {
                         ),
                       //Text('Conhecendo Flutter'),
                       ElevatedButton(
-                        onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
+                        onPressed: () {
+                          level++;
+                          print(level);
+                        },
+                        child: Icon(Icons.arrow_drop_up)),
                       
                     ],
                   ),
