@@ -61,9 +61,11 @@ class Task extends StatefulWidget {
 
 class _TaskState extends State<Task> {
   @override
+  int level = 0; // Adicionando variável para usar no incremento do level.
+
   // Adicionando espaço entre os containes.
   Widget build(BuildContext context) {
-    int level = 0; // Adicionando variável para usar no incremento do level.
+    
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -101,7 +103,9 @@ class _TaskState extends State<Task> {
                       //Text('Conhecendo Flutter'),
                       ElevatedButton(
                         onPressed: () {
-                          level++;
+                          setState(() {
+                            level++;
+                          });
                           print(level);
                         },
                         child: Icon(Icons.arrow_drop_up)),
