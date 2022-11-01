@@ -58,10 +58,11 @@ class Task extends StatelessWidget {
   @override
   // Adicionando espaço entre os containes.
   Widget build(BuildContext context) {
+    int level = 0; // Adicionando variável para usar no incremento do level.
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        
+
         
             child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
               children: [
@@ -71,7 +72,6 @@ class Task extends StatelessWidget {
                 ),
                 Column(
                   children: [
-
                     Container(
                   color: Colors.white,
                   height: 100,
@@ -100,16 +100,18 @@ class Task extends StatelessWidget {
                     ],
                   ),
                 ),
-
                     Text(
-                      'Nível:0',
+                      'Nível:$level',
                       style: TextStyle(color: Colors.white),
                     ),
-
                   ],
                 ),              
               ],
             ),
+
+
+
+
       ),
     );
   }
