@@ -18,8 +18,26 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter: Curso de Flutter'),
         ),
-        body: Column(
+        body: ListView(
          children:[
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
+          Task('Iniciando o Curso'),
+          Task('Fazendo o Curso'),
+          Task('Finalizando o curso'),
           Task('Iniciando o Curso'),
           Task('Fazendo o Curso'),
           Task('Finalizando o curso'),
