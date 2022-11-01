@@ -80,7 +80,18 @@ class Task extends StatelessWidget {
                         width: 72,
                         height: 100,
                       ),
-                      Text('Conhecendo Flutter'),
+                      
+                      // Criando um novo container para colocar o texto dentro e tratar o Overflow p/ o texto não quebrar.
+                      Container(
+                        width: 200,
+                        child: Text(
+                          frase,
+                          style: TextStyle(
+                            fontSize: 24, overflow: TextOverflow.ellipsis)
+                          ),
+                        ),
+                      )
+                      //Text('Conhecendo Flutter'),
                       ElevatedButton(
                         onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
                       
