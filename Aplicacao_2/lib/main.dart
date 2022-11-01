@@ -113,9 +113,13 @@ class _TaskState extends State<Task> {
                     ],
                   ),
                 ),
-                    Text(
-                      'Nível:$level',
-                      style: TextStyle(color: Colors.white),
+                    Row(
+                      children: [
+                        Text(
+                          'Nível:$level',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
                   ],
                 ),              
