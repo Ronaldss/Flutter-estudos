@@ -69,7 +69,10 @@ class Task extends StatelessWidget {
                   color: Colors.blue,
                   height: 140,
                 ),
-                Container(
+                Column(
+                  children: [
+
+                    Container(
                   color: Colors.white,
                   height: 100,
                   child: Row(
@@ -96,11 +99,17 @@ class Task extends StatelessWidget {
                       
                     ],
                   ),
-                )
+                ),
+
+                    Text(
+                      'Nível:0',
+                      style: TextStyle(color: Colors.white),
+                    ),
+
+                  ],
+                ),              
               ],
             ),
-          
-
       ),
     );
   }
