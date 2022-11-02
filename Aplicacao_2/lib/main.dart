@@ -60,75 +60,80 @@ class Task extends StatefulWidget {
 }
 
 class _TaskState extends State<Task> {
-  @override
   int level = 0; // Adicionando variável para usar no incremento do level.
+  @override
 
   // Adicionando espaço entre os containes.
   Widget build(BuildContext context) {
     
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-
-        
-            child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
-              children: [
-                Container(
-                  color: Colors.blue,
-                  height: 140,
-                ),
-                Column(
-                  children: [
-                    Container(
-                  color: Colors.white,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+              child: Stack( // Destro da estruta Stack "pilha" é possível colocar vários filhos, vários containes dentro.
+                children: [
+                  Container(
+                    color: Colors.blue,
+                    height: 140,
+                  ),
+                  Column(
                     children: [
                       Container(
-                        color: Colors.black26,
-                        width: 72,
-                        height: 100,
-                      ),
-                      
-                      // Criando um novo container para colocar o texto dentro e tratar o Overflow p/ o texto não quebrar.
-                      Container(
-                        width: 200,
-                        child: Text(
-                          widget.frase,
-                          style: TextStyle(
-                            fontSize: 24, overflow: TextOverflow.ellipsis),
-                          ),
-                        ),
-                      //Text('Conhecendo Flutter'),
-                      ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            level++;
-                          });
-                          print(level);
-                        },
-                        child: Icon(Icons.arrow_drop_up)),
-                      
-                    ],
-                  ),
-                ),
-                    Row(
+                    color: Colors.white,
+                    height: 100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Nível:$level',
-                          style: TextStyle(color: Colors.white),
+                        Container(
+                          color: Colors.black26,
+                          width: 72,
+                          height: 100,
                         ),
+                        
+                        // Criando um novo container para colocar o texto dentro e tratar o Overflow p/ o texto não quebrar.
+                        Container(
+                          width: 200,
+                          child: Text(
+                            widget.frase,
+                            style: TextStyle(
+                              fontSize: 24, overflow: TextOverflow.ellipsis),
+                            ),
+                          ),
+                        //Text('Conhecendo Flutter'),
+                        ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              level++;
+                            });
+                            print(level);
+                          },
+                          child: Icon(Icons.arrow_drop_up)),
+                        
                       ],
                     ),
-                  ],
-                ),              
-              ],
-            ),
-
-
-
-
+                  ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Adicionando alinhamento.
+                        children: [
+                          Container(
+                            child: LinearProgressIndicator(
+                              color: Colors.white,
+                              value: level / 10,
+                            ),
+                            width: 200,
+                          ),
+                          Text(
+                            'Nível:$level',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),              
+                ],
+              ),
+        ),
       ),
     );
   }
