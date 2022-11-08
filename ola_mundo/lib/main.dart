@@ -86,7 +86,15 @@ class _TaskState extends State<Task> {
                                   fontSize: 24, overflow: TextOverflow.ellipsis),
                             ),
                           ),
-                          Icon(Icons.star)
+                          Row(
+                            children: [
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                              Icon(Icons.star),
+                            ],
+                          ),
                         ],
                       ),
                       Column(
