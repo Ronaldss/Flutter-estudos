@@ -23,15 +23,15 @@ class MyApp extends StatelessWidget {
         body: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Task('Iniciando o Curso'),
-            Task('Fazendo o Curso'),
-            Task('Finalizando o Curso'),
-            Task('Iniciando o Curso'),
-            Task('Finalizando o Curso'),
-            Task('Iniciando o Curso'),
-            Task('Finalizando o Curso'),
-            Task('Iniciando o Curso'),
-            Task('Finalizando o Curso'),
+            Task('Iniciando o Curso', ''),
+            Task('Fazendo o Curso', ''),
+            Task('Finalizando o Curso', ''),
+            Task('Iniciando o Curso', ''),
+            Task('Finalizando o Curso', ''),
+            Task('Iniciando o Curso', ''),
+            Task('Finalizando o Curso', ''),
+            Task('Iniciando o Curso', ''),
+            Task('Finalizando o Curso', ''),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -42,7 +42,9 @@ class MyApp extends StatelessWidget {
 
 class Task extends StatefulWidget {
   final String frase;
-  const Task(this.frase, {super.key});
+  final String foto;
+
+  const Task(this.frase, this.foto, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -73,6 +75,11 @@ class _TaskState extends State<Task> {
                         color: Colors.black26,
                         width: 72,
                         height: 100,
+                        child: Image.network(
+                          'https://miro.medium.com/max/700/1*rb3JJRN2YfybijTcxQiiUQ.png',
+                          scale: 0.5,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                       Container(
                         width: 200,
@@ -82,19 +89,23 @@ class _TaskState extends State<Task> {
                               fontSize: 24, overflow: TextOverflow.ellipsis),
                         ),
                       ),
-                      ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              level++;
-                            });
-                            print(level); //Verificar se o level esta mudando
-                          },
-                          child: Column(
-                            children: [
-                              Icon(Icons.arrow_drop_up),
-                              Text('UPsadfadsf', style: TextStyle(fontSize: 12),)
-                            ],
-                          ))
+                      Column(
+                        children: [
+                          ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  level++;
+                                });
+                                print(level); //Verificar se o level esta mudando
+                              },
+                              child: Column(
+                                children: [
+                                  Icon(Icons.arrow_drop_up),
+                                  Text('UP', style: TextStyle(fontSize: 12),)
+                                ],
+                              )),
+                        ],
+                      )
                     ],
                   ),
                 ),
