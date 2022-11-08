@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             Task('Iniciando o Curso', 'https://avatars.githubusercontent.com/u/33934560?v=4'),
             Task('Fazendo o Curso', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU'),
             Task('Finalizando o Curso', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
-    
+            Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -76,13 +76,18 @@ class _TaskState extends State<Task> {
                           fit: BoxFit.contain,
                         ),
                       ),
-                      Container(
-                        width: 200,
-                        child: Text(
-                          widget.frase,
-                          style: TextStyle(
-                              fontSize: 24, overflow: TextOverflow.ellipsis),
-                        ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 200,
+                            child: Text(
+                              widget.frase,
+                              style: TextStyle(
+                                  fontSize: 24, overflow: TextOverflow.ellipsis),
+                            ),
+                          ),
+                          Icon(Icons.star)
+                        ],
                       ),
                       Column(
                         children: [
