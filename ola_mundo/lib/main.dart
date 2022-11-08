@@ -23,15 +23,10 @@ class MyApp extends StatelessWidget {
         body: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Task('Iniciando o Curso', ''),
-            Task('Fazendo o Curso', ''),
-            Task('Finalizando o Curso', ''),
-            Task('Iniciando o Curso', ''),
-            Task('Finalizando o Curso', ''),
-            Task('Iniciando o Curso', ''),
-            Task('Finalizando o Curso', ''),
-            Task('Iniciando o Curso', ''),
-            Task('Finalizando o Curso', ''),
+            Task('Iniciando o Curso', 'https://avatars.githubusercontent.com/u/33934560?v=4'),
+            Task('Fazendo o Curso', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU'),
+            Task('Finalizando o Curso', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
+    
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -76,7 +71,7 @@ class _TaskState extends State<Task> {
                         width: 72,
                         height: 100,
                         child: Image.network(
-                          'https://miro.medium.com/max/700/1*rb3JJRN2YfybijTcxQiiUQ.png',
+                          widget.foto,
                           scale: 0.5,
                           fit: BoxFit.contain,
                         ),
