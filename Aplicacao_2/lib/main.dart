@@ -89,12 +89,7 @@ class _TaskState extends State<Task> {
                             });
                             print(level); //Verificar se o level esta mudando
                           },
-                          child: Column(
-                            children: [
-                              Icon(Icons.arrow_drop_up),
-                              Text('UP', style: TextStyle(fontSize: 12),)
-                            ],
-                          ))
+                          child: Icon(Icons.arrow_drop_up))
                     ],
                   ),
                 ),
@@ -129,5 +124,3 @@ class _TaskState extends State<Task> {
     );
   }
 }
-
-// teste 2
