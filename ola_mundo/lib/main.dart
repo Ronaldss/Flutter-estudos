@@ -92,7 +92,7 @@ class _TaskState extends State<Task> {
                           child: Column(
                             children: [
                               Icon(Icons.arrow_drop_up),
-                              Text('UP', style: TextStyle(fontSize: 12),)
+                              Text('UPsadfadsf', style: TextStyle(fontSize: 12),)
                             ],
                           ))
                     ],
