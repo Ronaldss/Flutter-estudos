@@ -1,3 +1,10 @@
+// Erro da ultima aula, não consegui resolver o código
+// vou preferir resolver o erro depois,
+// vou copiar o código da última aula, da professora e continuar deste ponto.
+// Depois vou comparar os codigos
+
+
+
 import 'package:flutter/material.dart';
 
 void main() {
