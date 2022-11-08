@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
         body: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Task('Iniciando o Curso', 'https://avatars.githubusercontent.com/u/33934560?v=4'),
-            Task('Fazendo o Curso', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU'),
-            Task('Finalizando o Curso', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
+            Task('Ronald Santos', 'https://avatars.githubusercontent.com/u/33934560?v=4'),
+            Task('Flutter', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU'),
+            Task('Javascript', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
             Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'),
+            Task('HTML5', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -73,7 +74,7 @@ class _TaskState extends State<Task> {
                         child: Image.network(
                           widget.foto,
                           scale: 0.5,
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                         ),
                       ),
                       Column(
@@ -88,11 +89,11 @@ class _TaskState extends State<Task> {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.star),
-                              Icon(Icons.star),
-                              Icon(Icons.star),
-                              Icon(Icons.star),
-                              Icon(Icons.star),
+                              Icon(Icons.star, size: 15, color: Colors.blue,),
+                              Icon(Icons.star, size: 15, color: Colors.blue,),
+                              Icon(Icons.star, size: 15, color: Colors.blue,),
+                              Icon(Icons.star, size: 15, color: Colors.blue,),
+                              Icon(Icons.star, size: 15, color: Colors.blue,),
                             ],
                           ),
                         ],
