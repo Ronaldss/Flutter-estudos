@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
         body: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Task('Ronald Santos', 'https://avatars.githubusercontent.com/u/33934560?v=4'),
-            Task('Flutter', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU'),
-            Task('Javascript', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
-            Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'),
-            Task('HTML5', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU'),
+            Task('Ronald Santos', 'https://avatars.githubusercontent.com/u/33934560?v=4', 5),
+            Task('Flutter', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU', 4),
+            Task('Javascript', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png', 3),
+            Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png', 2),
+            Task('HTML5', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU', 1),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -39,8 +39,9 @@ class MyApp extends StatelessWidget {
 class Task extends StatefulWidget {
   final String frase;
   final String foto;
+  final int dificuldade;
 
-  const Task(this.frase, this.foto, {super.key});
+  const Task(this.frase, this.foto, this.dificuldade, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -91,20 +92,27 @@ class _TaskState extends State<Task> {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
                               Icon(
                                 Icons.star, 
                                 size: 15, 
-                                color: Colors.blue[100],
-                                ),
-                                Icon(
+                                color: (widget.dificuldade >= 5) ? Colors.blue : Colors.blue[100]),
+                              Icon(
                                 Icons.star, 
                                 size: 15, 
-                                color: Colors.blue[50],
-                                ),
+                                color: (widget.dificuldade >= 4) ? Colors.blue : Colors.blue[100]),
+                              Icon(
+                                Icons.star, 
+                                size: 15, 
+                                color: (widget.dificuldade >= 3) ? Colors.blue : Colors.blue[100]),
+                              Icon(
+                                Icons.star, 
+                                size: 15, 
+                                color: (widget.dificuldade >= 2) ? Colors.blue : Colors.blue[100]),
                               
+                              Icon(
+                                Icons.star, 
+                                size: 15, 
+                                color: (widget.dificuldade >= 1) ? Colors.blue : Colors.blue[100]),
                             ],
                           ),
                         ],
