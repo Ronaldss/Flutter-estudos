@@ -57,7 +57,10 @@ class _TaskState extends State<Task> {
         child: Stack(
           children: [
             Container(
-              color: Colors.pink,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: Colors.pink,
+              ),
               height: 140,
             ),
             Column(
@@ -146,7 +149,7 @@ class _TaskState extends State<Task> {
                         // ignore: sort_child_properties_last
                         child: LinearProgressIndicator(
                           color: Colors.white,
-                          value: level / 10,
+                          value: (widget.dificuldade > 0) ? (level / widget.dificuldade) / 10 : 1,
                         ),
                         width: 200,
                       ),
