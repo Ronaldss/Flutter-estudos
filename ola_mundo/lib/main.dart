@@ -20,15 +20,19 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('IFAL: Curso de Flutter'),
         ),
-        body: ListView(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            Task('Ronald Santos', 'https://avatars.githubusercontent.com/u/33934560?v=4', 5),
-            Task('Flutter', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU', 4),
-            Task('Javascript', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png', 3),
-            Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png', 2),
-            Task('HTML5', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU', 1),
-          ],
+        body: AnimatedOpacity(
+          opacity: 1,
+          duration: Duration(milliseconds: 5000),
+          child: ListView(
+            // ignore: prefer_const_literals_to_create_immutables
+            children: [
+              Task('Ronald Santos', 'https://avatars.githubusercontent.com/u/33934560?v=4', 5),
+              Task('Flutter', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZznbcLRENShYNmDgA4vWkLl6-NGn40M2Iz-xlnjQHY3HKh9TyVrQ3-P-XgiPsqsev8gY&usqp=CAU', 4),
+              Task('Javascript', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png', 3),
+              Task('CSS3','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png', 2),
+              Task('HTML5', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU', 1),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
       ),
