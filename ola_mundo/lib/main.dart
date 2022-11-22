@@ -78,6 +78,8 @@ class _TaskState extends State<Task> {
                         ),
                       ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
                             width: 200,
