@@ -81,10 +81,13 @@ class _TaskState extends State<Task> {
                         ),                       
                         width: 72,
                         height: 100,
-                        child: Image.network(
-                          widget.foto,
-                          scale: 0.5,
-                          fit: BoxFit.cover,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: Image.network(
+                            widget.foto,
+                            scale: 0.5,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       Column(
