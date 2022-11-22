@@ -92,8 +92,17 @@ class _TaskState extends State<Task> {
                               Icon(Icons.star, size: 15, color: Colors.blue,),
                               Icon(Icons.star, size: 15, color: Colors.blue,),
                               Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
+                              Icon(
+                                Icons.star, 
+                                size: 15, 
+                                color: Colors.blue[100],
+                                ),
+                                Icon(
+                                Icons.star, 
+                                size: 15, 
+                                color: Colors.blue[50],
+                                ),
+                              
                             ],
                           ),
                         ],
@@ -150,4 +159,4 @@ class _TaskState extends State<Task> {
   }
 }
 
-// teste 2
+// teste 3
