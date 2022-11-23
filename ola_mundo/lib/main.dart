@@ -3,11 +3,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool opacidade = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +28,7 @@ class MyApp extends StatelessWidget {
           title: Text('IFAL: Curso de Flutter'),
         ),
         body: AnimatedOpacity(
-          opacity: 1,
+          opacity: opacidade ? 1 : 0,
           duration: Duration(milliseconds: 5000),
           child: ListView(
             // ignore: prefer_const_literals_to_create_immutables
@@ -34,7 +41,14 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              opacidade = !opacidade;
+            });
+          },
+          child: Icon(Icons.remove_red_eye),
+        ),
       ),
     );
   }
